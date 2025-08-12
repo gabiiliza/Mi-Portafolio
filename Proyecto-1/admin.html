@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<script type="text/javascript">
+    var urlParams = new URLSearchParams(window.location.search)
+    var username = urlParams.get("usuario")
+
+    document.addEventListener("DOMContentLoaded",function(){
+        if (username) {
+            document.getElementById("bienvenida").textContent = "Bienvenido/a, " +
+            username + " ! "
+        } else {
+            document.getElementById("bienvenida").textContent = "Usuario no especificado!"
+        }
+    })
+</script>
+<body>
+    <header>
+        <a href="index.html"><img src="multimedia/logo.png" alt="Logo de la ONG" class="logo"></a>
+    </header>
+    <nav class="bg-success">
+        <ul class="nav nav-pills nav-verde">
+        <li role="presentation">
+          <a href="index.html" class="btn btn-success">Volver a Inicio</a></li>
+        </ul>
+    </nav>
+    <h1 id="bienvenida"></h1>
+    <main class="container">
+      <h2>Gestión de Proyectos</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading" style="color: rgb(4, 167, 4); font-weight: bold;">Nuevo Proyecto</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label>Nombre del Proyecto</label>
+                    <input type="text" class="form-control" placeholder="Ej: Limpieza de residuos marinos">
+                  </div>
+                  <div class="form-group">
+                    <label>Detalles</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Fecha de Inicio</label>
+                    <input type="text" class="form-control" placeholder="dd/mm/aaaa">
+                  </div>
+                  <button type="submit" class="btn btn-success">Agregar Proyecto</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading" style="color: rgb(235, 64, 11); font-weight: bold;">Eliminar o modificar proyectos</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label>Seleccionar proyecto existente</label>
+                    <select class="form-control">
+                      <option>Elegir proyecto...</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Modificar datos:</strong></label>
+                    <input type="text" class="form-control" placeholder="Nuevo nombre">
+                    <textarea class="form-control" rows="2" placeholder="Nueva descripción"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-warning">Modificar</button>
+                  <button type="button" class="btn btn-danger pull-right">Borrar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+</body>
+</html>

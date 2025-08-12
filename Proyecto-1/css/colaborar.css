@@ -1,0 +1,109 @@
+* { margin: 0px; padding: 0px;
+box-sizing: border-box;}
+
+header {
+    background-color: #ffeecc;
+    height: 140px;
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    height: 140px;
+    width: 140px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+nav {
+  margin-bottom: 15px;
+
+}
+.nav-verde li {
+  background-color: #5cb85c
+}
+
+.nav-verde li a {
+  color: white !important;
+}
+
+.nav-verde li a:hover,
+.nav-verde li a:focus {
+  color: white !important;
+  background-color: #4cae4c;
+  text-decoration: none;
+}
+
+.nav.nav-pills {
+    text-align: center;
+}
+
+.nav.nav-pills > li {
+  float: none;
+  display: inline-block;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group.inline {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group.inline > div {
+  flex: 1;
+}
+
+.seccion-extra {
+  display: none;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .form-group.inline {
+    flex-direction: column;
+  }
+}

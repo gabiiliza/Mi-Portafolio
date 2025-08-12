@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaborar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/colaborar.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+      <a href="index.html"><img src="multimedia/logo.png" alt="Logo de la ONG" class="logo"></a>
+    </header>
+    <nav class="bg-success">
+        <ul class="nav nav-pills nav-verde">
+        <li role="presentation" class="bg-success"><a href="index.html">Volver a Inicio</a></li>
+        </ul>
+    </nav>
+    <main>
+      <form class="formulario" id="colaboracionForm">
+        <h2>Formulario de Colaboración</h2>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="gmail">Gmail</label>
+          <input type="email" id="gmail" name="gmail" required pattern=".+@gmail\.com">
+        </div>
+        <div class="form-group">
+          <label for="tarjeta">Número de tarjeta</label>
+          <input type="text" id="tarjeta" name="tarjeta" required pattern="[0-9]{16}" placeholder="16 dígitos">
+        </div>
+        <div class="form-group">
+          <label for="tipo">¿Cómo querés colaborar?</label>
+            <select id="tipo" name="tipo" required onchange="mostrarSeccion()">
+              <option value="">Seleccioná una opción</option>
+              <option value="dinero">Con dinero</option>
+              <option value="trabajo">Con trabajo</option>
+              <option value="difusion">Con difusión</option>
+            </select>
+          </div>
+          <div class="form-group seccion-extra" id="seccion-dinero">
+              <label>Seleccioná un monto:</label>
+              <select>
+                <option>$500</option>
+                <option>$1000</option>
+                <option>$2000</option>
+              </select>
+
+              <label>Frecuencia:</label>
+              <select>
+                <option>Por única vez</option>
+                <option>Mensual</option>
+              </select>
+            </div>
+            <div class="form-group seccion-extra" id="seccion-trabajo">
+              <label>¿Qué tipo de tareas podrías hacer?</label>
+              <textarea rows="3" placeholder="Ej: ayudar en eventos, tareas administrativas, etc."></textarea>
+            </div>
+            <div class="form-group seccion-extra" id="seccion-difusion">
+              <label>¿Dónde podrías difundir?</label>
+              <textarea rows="3" placeholder="Ej: redes sociales, medios locales, boca en boca..."></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+      <script src="js/scripts.js"></script>
+    </main>
+</body>
+</html>
